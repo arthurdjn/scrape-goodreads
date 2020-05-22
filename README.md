@@ -130,7 +130,7 @@ You can finally retrieve similar authors from an author with:
 
 ```python
 author = goodreads.search_author(AUTHOR_ID)
-authors = author.get_similar_author()
+authors = author.get_similar_authors(top_k=5)
 ```
 
 ## Save and export
