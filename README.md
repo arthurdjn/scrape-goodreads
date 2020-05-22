@@ -126,6 +126,13 @@ author = goodreads.search_author(AUTHOR_ID)
 info = author.get_info()  # description of the author (genre, description, references etc.)
 ```
 
+You can finally retrieve similar authors from an author with:
+
+```python
+author = goodreads.search_author(AUTHOR_ID)
+authors = author.get_similar_author()
+```
+
 ## Save and export
 
 You can save data in a JSON format (and encode it to ASCII if you want).
