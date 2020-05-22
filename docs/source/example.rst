@@ -111,7 +111,7 @@ scrape online if the cache is not empty. Turn this behavior off by setting ``cac
 
     author = goodreads.search_author(AUTHOR_ID)
     quotes = author.get_quotes(top_k=5)
-    # WARNING: here, it will look for books saved in the cache (book added while scraping quotes)
+    # WARNING: here, it will look for books saved in the cache (books added while scraping quotes)
     books = author.get_books(top_k=5)
     # Turn it off, and search for books independently of the quotes (it will connect and scrape on goodreads.com)
     books = author.get_books(top_k=5, cache=False)
