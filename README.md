@@ -41,7 +41,40 @@ book = goodreads.search_book(AUTHOR_ID, BOOK_ID)
 # Look for the 10 first books (set it to ``top_k=None`` to turn it off)
 books = goodreads.search_books(AUTHOR_ID, top_k=10)
 # ...Or quotes
-quotes = goodreads.search_quotes(AUTHOR_ID, top_k=10)
+quotes = goodreads.search_quotes(AUTHOR_ID, top_k=5)
+```
+
+Quotes are made of a text, but optional information can be added (like number of likes, tags,
+reference etc.)
+
+```python
+quotes = goodreads.search_quotes(AUTHOR_ID, top_k=5)
+
+for quote in quotes:
+    print(quote)
+    print()
+```
+Output:
+```pycon
+“Books are a uniquely portable magic.”
+― Stephen King, from "On Writing: A Memoir Of The Craft"
+  Likes: 16225, Tags: books, magic, reading
+
+“If you don't have time to read, you don't have the time (or the tools) to write. Simple as that.”
+― Stephen King
+  Likes: 12565, Tags: reading, writing
+
+“Get busy living or get busy dying.”
+― Stephen King, from "Different Seasons"
+  Likes: 9014, Tags: life
+
+“Books are the perfect entertainment: no commercials, no batteries, hours of enjoyment for each dollar spent. What I wonder is why everybody doesn't carry a book around for those inevitable dead spots in life.”
+― Stephen King
+  Likes: 8667, Tags: books
+
+“When his life was ruined, his family killed, his farm destroyed, Job knelt down on the ground and yelled up to the heavens, "Why god? Why me?" and the thundering voice of God answered, There's just something about you that pisses me off.”
+― Stephen King, from "Storm Of The Century"
+  Likes: 7686, Tags: god, humor, religion
 ```
 
 ## Structure
@@ -67,6 +100,7 @@ quotes = author.get_quotes()
 book = goodreads.search_book(AUTHOR_ID, BOOK_ID)
 quotes = book.get_quotes()
 ```
+
 
 In addition, you can retrieve parent objects from children:
 
