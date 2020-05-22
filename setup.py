@@ -15,7 +15,7 @@ def readme_data():
 find_packages()
 
 setup(name='scrapereads',
-      version='0.0.1',
+      version='0.0.2',
       description='Scrape books and quotes on GoodReads.',
       long_description=readme_data(),
       long_description_content_type="text/markdown",
