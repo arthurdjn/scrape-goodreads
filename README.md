@@ -1,7 +1,7 @@
 # scrape-goodreads
 Python package to scrape data from goodreads.com website. Authors, Books, and Quotes can be extracted.
 
-*Project made during a Deep Learning project for music generation using GPT2 model.*
+*Project made during a Deep Learning project for poem generation using GPT2 model.*
 
 
 # Installation
