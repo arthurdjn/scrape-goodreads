@@ -1,3 +1,8 @@
+[![](https://img.shields.io/readthedocs/scrape-goodreads)](https://scrape-goodreads.readthedocs.io/en/latest/index.html)
+[![](https://img.shields.io/pypi/v/scrapereads)](https://pypi.org/project/scrapereads/)
+![](https://img.shields.io/pypi/status/scrapereads)
+
+
 # scrape-goodreads
 Python package to scrape data from goodreads.com website. Authors, Books, and Quotes can be extracted.
 
