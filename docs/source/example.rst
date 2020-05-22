@@ -5,7 +5,7 @@ Examples
 The requests should be made from the API. Then, you can have access to authors, books, quotes.
 
 
-LyricsFandom API
+GoodReads API
 ================
 
 The API uses ``id`` to search authors, books or quotes.
