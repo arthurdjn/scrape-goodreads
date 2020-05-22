@@ -44,6 +44,7 @@ You can have access to their attributes with:
     author_name = quote.author_name
     author_id = quote.author_id
     quote_id = quote.quote_id
+    text = quote.text
     tags = quote.tags
     likes = quote.likes
 
@@ -77,9 +78,8 @@ which yields items successively and thus are more optimized as all items are not
     # From and author
     author = goodreads.search_author(AUTHOR_ID)
     for quote in author.quotes():
-        lyrics = quote.get_lyrics()
-        print(lyrics)
-        print('\n-----\n')
+        # quote is a Quote object
+        print(quote)
 
 
 From children classes (author --> book --> quote), you can retrieve data too:
@@ -98,6 +98,26 @@ From children classes (author --> book --> quote), you can retrieve data too:
     # From an book
     book = books[0]
     author = book.get_author()
+
+Cache System
+============
+
+*scrapereads* uses a cache system, that add dynamically data to an object while scraping. The main advantage, is that
+you don't have to scrape twice. The downside however, is that cache data is first loaded, meaning that it won't
+scrape online if the cache is not empty. Turn this behavior off by setting ``cache=False``:
+
+
+.. code-block:: python
+
+    author = goodreads.search_author(AUTHOR_ID)
+    quotes = author.get_quotes(top_k=5)
+    # WARNING: here, it will look for books saved in the cache (book added while scraping quotes)
+    books = author.get_books(top_k=5)
+    # Turn it off, and search for books independently of the quotes (it will connect and scrape on goodreads.com)
+    books = author.get_books(top_k=5, cache=False)
+    # Search for quotes regardless of previously added quotes (it will connect and scrape on goodreads.com)
+    quotes = author.get_quotes(top_k=5, cache=False)
+
 
 
 Save and export
