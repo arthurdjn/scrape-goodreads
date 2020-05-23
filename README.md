@@ -1,4 +1,4 @@
-[![](https://img.shields.io/readthedocs/scrape-goodreads)](https://scrape-goodreads.readthedocs.io/en/latest/index.html)
+[![](https://img.shields.io/readthedocs/scrape-goodreads)](https://scrapereads.readthedocs.io/en/latest/)
 [![](https://img.shields.io/pypi/v/scrapereads)](https://pypi.org/project/scrapereads/)
 ![](https://img.shields.io/pypi/status/scrapereads)
 
