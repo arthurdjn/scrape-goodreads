@@ -90,6 +90,7 @@ The package is divided as follows:
 * Book, inherits from Author
 * Quote, inherits from Book
 
+They share an abstract structure with AuthorMeta, BookMeta, QuoteMeta.
 
 ## Retrieve data
 
